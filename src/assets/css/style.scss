@@ -61,6 +61,10 @@ p {
   margin-top: 40px;
 }
 
+.pb30 {
+  padding-bottom: 30px;
+}
+
 .pb40 {
   padding-bottom: 40px;
 }
@@ -145,7 +149,9 @@ p {
 
   .white-block {
     margin-bottom: 30px;
-    padding: 30px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
     background: rgba(255, 255, 255, 1);
     border-radius: 10px;
     font-size: 32px;
@@ -157,8 +163,8 @@ p {
     }
 
     .name {
-      margin-top: 20px;
-      color: rgba(24, 31, 60, 1);
+      //margin-top: 20px;
+      color: #999999;
     }
 
     .value {
@@ -167,14 +173,19 @@ p {
     }
 
     .value:last-child {
-      margin-bottom: 40px;
+      margin-bottom: 0;
+      padding-bottom: 40px;
+    }
+
+    .date {
+      margin-bottom: 30px;
     }
   }
 
   .line.v750 {
     width: 630px;
     height: 1px;
-    margin: 40px auto;
+    margin: 0 auto 40px;
     background: rgba(20, 26, 50, 1);
     opacity: 0.3;
   }
