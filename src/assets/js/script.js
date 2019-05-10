@@ -97,7 +97,7 @@ var langSel = document.querySelector('#lang');
 
 var zhEns = document.querySelectorAll('.zh-en');
 
-var lang = localStorage.getItem('lang');
+var lang = localStorage.getItem('lang') || 'zh';
 
 langSel.onchange = function() {
   lang = this.value;
