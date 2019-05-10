@@ -89,8 +89,8 @@ p {
 
     .left {
       box-sizing: border-box;
-      padding: 30px;
       height: 452px;
+      padding: 30px;
       background: url("../img/bg750.png") no-repeat center center;
 
       .title {
@@ -410,6 +410,7 @@ p {
 
     .left {
       float: left;
+      max-width: 455px;
       background: transparent;
 
       .title {
@@ -642,4 +643,10 @@ p {
   text-align: center;
   line-height: 96px;
   color: #ffffff;
+}
+
+#lang {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
