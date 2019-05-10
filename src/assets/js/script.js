@@ -103,7 +103,8 @@ langSel.onchange = function() {
   lang = this.value;
   localStorage.setItem('lang', lang);
 
-  for (var dom of zhEns) {
+  for (var key in zhEns) {
+    var dom = zhEns[key];
     var text = dom.innerText || dom.getAttribute('placeholder');
     var enText;
     if (lang == 'en') {
