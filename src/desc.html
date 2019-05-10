@@ -5,46 +5,76 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=750, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <title>会议管理系统</title>
+  <title class="zh-en">会议管理系统</title>
   <link rel="stylesheet" href="./assets/css/style.scss">
 </head>
 
 <body>
 
-<img src="./assets/img/desc-top.png" class="top-img v750">
+  <img src="./assets/img/desc-top.png" class="top-img v750">
 
-<div class="wrap">
+  <div class="wrap">
 
-  <link rel="import" href="./widgets/header.html?__inline">
+    <link rel="import" href="./widgets/header.html?__inline">
 
-  <div class="box">
-    <div class="title v1336">2019年中国器官移植大会<a href="register.html" class="sign-up v1336">我要报名</a></div>
+    <div class="box">
+      <div class="title v1336">
+        <span class="zh-en">2019年中国器官移植大会</span>
+        <a href="register.html" class="sign-up v1336 zh-en">我要报名</a>
+      </div>
 
-    <ul class="nav v1336">
-      <li class="active"><a href="desc.html"><img src="./assets/img/desc.png"> <span>会议简介</span></a></li>
-      <li><a href="info.html"><img src="./assets/img/info.png"> <span>会议信息</span></a></li>
-      <li><a href="schedule.html"><img src="./assets/img/schedule.png"> <span>会议日程</span></a></li>
-      <li><a href="person.html"><img src="./assets/img/person.png"> <span>重要嘉宾</span></a></li>
-    </ul>
+      <ul class="nav v1336 zh-en">
+        <li class="active">
+          <a href="desc.html">
+            <img src="./assets/img/desc.png">
+            <span class="zh-en">会议简介</span>
+          </a>
+        </li>
+        <li>
+          <a href="info.html">
+            <img src="./assets/img/info.png">
+            <span class="zh-en">会议信息</span>
+          </a>
+        </li>
+        <li>
+          <a href="schedule.html">
+            <img src="./assets/img/schedule.png">
+            <span class="zh-en">会议日程</span>
+          </a>
+        </li>
+        <li>
+          <a href="person.html">
+            <img src="./assets/img/person.png">
+            <span class="zh-en">重要嘉宾</span>
+          </a>
+        </li>
+      </ul>
 
-    <div class="main fz26">
-      <div class="white-block pb30">
-        <div class="tc">2019年中国器官移植大会</div>
-        <div class="tc mt40">暨第六届中国器官移植医师年会</div>
-        <div class="tc mt40">欢迎辞</div>
-        <div class="tl mt40">
-          由中国医师协会，中国医师协会器官移植医师分会,中国工程院医药卫生学部主办，广东省省医师协会，中山大学附属第一医院，中国肝移植注册中心（CLTR），《中华移植杂志（电子版）》，单位协办的2019中国器官移植大会暨第六届中国器官移植医师年会 " 2019 Chinese Transplant Congress [CTC] 6th Chinese Transplant Doctor’s Congress [CTDC] ”拟于2019年8月1-3日在广东省广州市隆重召开。
-        </div>
-        <div class="tl">
-          本届大会是中国器官移植领域最高级别的全国性会议，以促进学科发展，增进学术交流，引领行业方向为目的，邀请了众多国内外著名的器官移植及相关学科的专家，针对现今国内外器官移植领域的人文及学术议题进行广泛的探讨。会议主题涵盖器官移植临床探索，基础研究，转化医学等重要发展领域，内容玲琅满目，大会蓄势待发，大会欲集四海医学之精华，助中华移植之大成。让我们相聚羊城，共襄移植盛举！
+      <div class="main fz26">
+        <div class="white-block pb30">
+          <div class="tc zh-en">2019年中国器官移植大会</div>
+          <div class="tc mt40 zh-en">暨第六届中国器官移植医师年会</div>
+          <div class="tc mt40 zh-en">欢迎辞</div>
+          <div class="tl mt40 zh-en">
+            由中国医师协会，中国医师协会器官移植医师分会,中国工程院医药卫生学部主办，广东省省医师协会，中山大学附属第一医院，中国肝移植注册中心（CLTR），《中华移植杂志（电子版）》，单位协办的2019中国器官移植大会暨第六届中国器官移植医师年会 " 2019 Chinese Transplant Congress [CTC] 6th Chinese Transplant Doctor’s Congress [CTDC] ”拟于2019年8月1-3日在广东省广州市隆重召开。
+          </div>
+          <div class="tl zh-en">
+            本届大会是中国器官移植领域最高级别的全国性会议，以促进学科发展，增进学术交流，引领行业方向为目的，邀请了众多国内外著名的器官移植及相关学科的专家，针对现今国内外器官移植领域的人文及学术议题进行广泛的探讨。会议主题涵盖器官移植临床探索，基础研究，转化医学等重要发展领域，内容玲琅满目，大会蓄势待发，大会欲集四海医学之精华，助中华移植之大成。让我们相聚羊城，共襄移植盛举！
+          </div>
         </div>
       </div>
     </div>
+
   </div>
 
-</div>
+  <a href="register.html" class="sign-up-btn v750 zh-en">我要报名</a>
 
-<a href="register.html" class="sign-up-btn v750">我要报名</a>
+  <select id="lang">
+    <option value="zh">中文</option>
+    <option value="en">English</option>
+  </select>
+
+  <script src="./assets/js/script.js"></script>
 
 </body>
 

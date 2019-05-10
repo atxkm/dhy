@@ -264,6 +264,15 @@ p {
       }
     }
   }
+
+  #lang {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 136px;
+    height: 38px;
+    font-size: 28px;
+  }
 }
 
 @media screen and (min-width: 1336px) {
@@ -578,6 +587,12 @@ p {
       }
     }
   }
+
+  #lang {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
 }
 
 .box3 {
@@ -606,7 +621,9 @@ p {
     text-align: center;
 
     .msg {
-      line-height: 70px;
+      display: flex;
+      justify-content: center;
+      height: 70px;
     }
   }
 
@@ -643,10 +660,4 @@ p {
   text-align: center;
   line-height: 96px;
   color: #ffffff;
-}
-
-#lang {
-  position: absolute;
-  top: 20px;
-  right: 20px;
 }
