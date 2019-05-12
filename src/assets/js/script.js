@@ -99,12 +99,15 @@ var zhEns = document.querySelectorAll('.zh-en');
 
 var lang = localStorage.getItem('lang') || 'zh';
 
+var zhImgs = document.querySelectorAll('.zh');
+var enImgs = document.querySelectorAll('.en');
+
 langSel.onchange = function() {
   lang = this.value;
   localStorage.setItem('lang', lang);
 
-  for (var key in zhEns) {
-    var dom = zhEns[key];
+  for (var i = 0; i < zhEns.length; i++) {
+    var dom = zhEns[i];
     var text = dom.innerText || dom.getAttribute('placeholder');
     var enText;
     if (lang == 'en') {
@@ -119,6 +122,14 @@ langSel.onchange = function() {
         dom.innerText = enText;
       }
     }
+  }
+
+  if (lang == 'en') {
+    zhImgs.forEach(item => item.setAttribute('hide', true));
+    enImgs.forEach(item => item.removeAttribute('hide'));
+  } else if (lang == 'zh') {
+    zhImgs.forEach(item => item.removeAttribute('hide'));
+    enImgs.forEach(item => item.setAttribute('hide', true));
   }
 };
 

@@ -40,14 +40,6 @@ p {
   word-wrap: break-word
 }
 
-.v1336 {
-  display: none !important;
-}
-
-.v750 {
-  display: block !important;
-}
-
 .tc {
   text-align: center;
 }
@@ -71,6 +63,22 @@ p {
 
 @media screen and (max-width: 1336px) {
 
+  .v1336 {
+    display: none !important;
+  }
+
+  .v750 {
+    display: block !important;
+  }
+
+  [hide] {
+    display: none;
+  }
+
+  .v750[hide] {
+    display: none !important;
+  }
+
   body {
     background: rgba(240, 242, 245, 1);
   }
@@ -89,9 +97,8 @@ p {
 
     .left {
       box-sizing: border-box;
-      height: 452px;
       padding: 30px;
-      background: url("../img/bg750.png") no-repeat center center;
+      background: url("../img/bg750.png") no-repeat center center / 100% 100%;
 
       .title {
         font-weight: 600;
