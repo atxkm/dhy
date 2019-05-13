@@ -102,14 +102,18 @@ var lang = localStorage.getItem('lang') || 'zh';
 var zhImgs = document.querySelectorAll('.zh');
 var enImgs = document.querySelectorAll('.en');
 
-langSel.onchange = function() {
-  lang = this.value;
+var langZh = document.querySelector('.lang-zh');
+var langEn = document.querySelector('.lang-en');
+
+function changeLang(_lang) {
+  lang = _lang;
   localStorage.setItem('lang', lang);
 
   for (var i = 0; i < zhEns.length; i++) {
     var dom = zhEns[i];
     var text = dom.innerText || dom.getAttribute('placeholder');
     var enText;
+
     if (lang == 'en') {
       enText = translate[text];
     } else {
@@ -122,16 +126,51 @@ langSel.onchange = function() {
         dom.innerText = enText;
       }
     }
-  }
 
-  if (lang == 'en') {
-    zhImgs.forEach(item => item.setAttribute('hide', true));
-    enImgs.forEach(item => item.removeAttribute('hide'));
-  } else if (lang == 'zh') {
-    zhImgs.forEach(item => item.removeAttribute('hide'));
-    enImgs.forEach(item => item.setAttribute('hide', true));
+    if (lang == 'en') {
+      zhImgs.forEach(item => item.setAttribute('hide', true));
+      enImgs.forEach(item => item.removeAttribute('hide'));
+      langZh.style.color = '';
+      langEn.style.color = '#ffffff';
+    } else if (lang == 'zh') {
+      zhImgs.forEach(item => item.removeAttribute('hide'));
+      enImgs.forEach(item => item.setAttribute('hide', true));
+      langZh.style.color = '#ffffff';
+      langEn.style.color = '';
+    }
   }
-};
+}
+
+// langSel.onchange = function() {
+//   lang = this.value;
+//   localStorage.setItem('lang', lang);
+//
+//   for (var i = 0; i < zhEns.length; i++) {
+//     var dom = zhEns[i];
+//     var text = dom.innerText || dom.getAttribute('placeholder');
+//     var enText;
+//     if (lang == 'en') {
+//       enText = translate[text];
+//     } else {
+//       enText = findKey(text);
+//     }
+//     if (enText) {
+//       if (dom.getAttribute('placeholder')) {
+//         dom.setAttribute('placeholder', enText);
+//       } else {
+//         dom.innerText = enText;
+//       }
+//     }
+//   }
+//
+//   if (lang == 'en') {
+//     zhImgs.forEach(item => item.setAttribute('hide', true));
+//     enImgs.forEach(item => item.removeAttribute('hide'));
+//   } else if (lang == 'zh') {
+//     zhImgs.forEach(item => item.removeAttribute('hide'));
+//     enImgs.forEach(item => item.setAttribute('hide', true));
+//   }
+// };
 
 function findKey(value) {
   for (var key in translate) {
@@ -141,6 +180,6 @@ function findKey(value) {
   }
 }
 
-langSel.value = lang;
-langSel.onchange();
-
+if (lang) {
+  changeLang(lang);
+}
