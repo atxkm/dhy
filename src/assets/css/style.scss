@@ -66,6 +66,7 @@ p {
 }
 
 .v750 [active] {
+  display: block;
   color: #028FFB;
 }
 
@@ -99,29 +100,33 @@ p {
 
     ul {
       float: right;
-      height: 96px;
+      padding-right: 30px;
+      background: #ffffff url("../../assets/img/drop-down.png") no-repeat right 30px top 45px;
       line-height: 96px;
       cursor: pointer;
 
       span {
-        display: block;
-        padding: 0 30px;
+        display: none;
+        margin: 0 30px;
+        background: #ffffff;
         font-size: 32px;
         font-weight: 600;
+        text-align: right;
         color: rgba(24, 31, 60, 1);
-        background-color: #ffffff;
-      }
 
-      .lang-zh {
-        background: #ffffff url("../../assets/img/drop-down.png") no-repeat right 30px center;
-
-
+        &.active {
+          color: #ffffff;
+        }
       }
     }
   }
 
   header[show] {
     overflow: visible;
+
+    span {
+      display: block;
+    }
   }
 
   .wrap {
