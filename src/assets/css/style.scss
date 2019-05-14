@@ -61,6 +61,14 @@ p {
   padding-bottom: 40px;
 }
 
+.v1336 [active] {
+  color: #ffffff;
+}
+
+.v750 [active] {
+  color: #028FFB;
+}
+
 @media screen and (max-width: 1336px) {
 
   .v1336 {
@@ -84,6 +92,7 @@ p {
   }
 
   header {
+    overflow: hidden;
     height: 96px;
     margin-bottom: 30px;
     background: rgba(255, 255, 255, 1);
@@ -104,9 +113,15 @@ p {
       }
 
       .lang-zh {
-        background: #ffffff url("../../assets/img/drop-down.png") no-repeat right  30px center;
+        background: #ffffff url("../../assets/img/drop-down.png") no-repeat right 30px center;
+
+
       }
     }
+  }
+
+  header[show] {
+    overflow: visible;
   }
 
   .wrap {
@@ -164,10 +179,42 @@ p {
     }
 
     .right {
+      padding-bottom: 40px;
 
       li {
+        height: 200px;
         margin-top: 30px;
-        background-color: transparent;
+        padding-left: 200px;
+
+        span:nth-child(1) {
+          display: block;
+          padding-top: 43px;
+          font-size: 40px;
+          color: rgba(255, 255, 255, 1);
+        }
+
+        span:nth-child(2) {
+          display: block;
+          margin-top: 25px;
+          font-size: 24px;
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+
+      .li1 {
+        background: url("../../assets/img/desc750.png") no-repeat 70px center, url("../../assets/img/desc-img.png") no-repeat center center;
+      }
+
+      .li2 {
+        background: url("../../assets/img/info750.png") no-repeat 70px center, url("../../assets/img/info-img.png") no-repeat center center;
+      }
+
+      .li3 {
+        background: url("../../assets/img/schedule750.png") no-repeat 70px center, url("../../assets/img/schedule-img.png") no-repeat center center;
+      }
+
+      .li4 {
+        background: url("../../assets/img/person750.png") no-repeat 70px center, url("../../assets/img/person-img.png") no-repeat center center;
       }
     }
   }

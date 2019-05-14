@@ -105,7 +105,22 @@ var enImgs = document.querySelectorAll('.en');
 var langZh = document.querySelector('.lang-zh');
 var langEn = document.querySelector('.lang-en');
 
+var v750header = document.querySelector('#v750header');
+
+var index = 0;
+v750header.onclick = (e) => {
+  if (index++ % 2 == 0) {
+    v750header.setAttribute('show', true);
+  } else {
+    v750header.removeAttribute('show');
+  }
+};
+
 function changeLang(_lang) {
+  if (!v750header.getAttribute('show')) {
+    return;
+  }
+
   lang = _lang;
   localStorage.setItem('lang', lang);
 
@@ -130,13 +145,13 @@ function changeLang(_lang) {
     if (lang == 'en') {
       zhImgs.forEach(item => item.setAttribute('hide', true));
       enImgs.forEach(item => item.removeAttribute('hide'));
-      langZh.style.color = '';
-      langEn.style.color = '#ffffff';
+      langZh.removeAttribute('active');
+      langEn.setAttribute('active', true);
     } else if (lang == 'zh') {
       zhImgs.forEach(item => item.removeAttribute('hide'));
       enImgs.forEach(item => item.setAttribute('hide', true));
-      langZh.style.color = '#ffffff';
-      langEn.style.color = '';
+      langZh.setAttribute('active', true);
+      langEn.removeAttribute('active');
     }
   }
 }
