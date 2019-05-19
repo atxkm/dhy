@@ -91,9 +91,15 @@ var translate = {
   '确定': 'OK',
   '由中国医师协会，中国医师协会器官移植医师分会,中国工程院医药卫生学部主办，广东省省医师协会，中山大学附属第一医院，中国肝移植注册中心（CLTR），《中华移植杂志（电子版）》，单位协办的2019中国器官移植大会暨第六届中国器官移植医师年会 " 2019 Chinese Transplant Congress [CTC] 6th Chinese Transplant Doctor’s Congress [CTDC] ”拟于2019年8月1-3日在广东省广州市隆重召开。': 'Sponsored by Chinese doctors association, organ transplantation physicians branch of Chinese doctors association, medical and health department of Chinese academy of engineering, guangdong provincial doctors association, the first affiliated hospital of sun yat-sen university, China liver transplantation registration center (CLTR), Chinese journal of transplantation (electronic edition), The 6th Chinese organ Transplant doctors\' Congress [CTC] 6chinese Transplant Doctor\'s Congress [CTDC], jointly organized by the Transplant unit, will be held in guangzhou, guangdong province from August 1 to 3, 2019.',
   '本届大会是中国器官移植领域最高级别的全国性会议，以促进学科发展，增进学术交流，引领行业方向为目的，邀请了众多国内外著名的器官移植及相关学科的专家，针对现今国内外器官移植领域的人文及学术议题进行广泛的探讨。会议主题涵盖器官移植临床探索，基础研究，转化医学等重要发展领域，内容玲琅满目，大会蓄势待发，大会欲集四海医学之精华，助中华移植之大成。让我们相聚羊城，共襄移植盛举！': 'This conference is the highest level of Chinese organ transplantation field national conference, in order to promote the discipline development, enhance academic exchanges, leading the industry direction, for the purpose of invited many famous both at home and abroad experts in organ transplantation and related disciplines, for nowadays at home and abroad cultural and academic issues in the field of organ transplantation is widely discussed. The theme of the conference covers the clinical exploration of organ transplantation, basic research, translational medicine and other important areas of development. The conference is full of beautiful contents, and the conference is ready to develop. Let us get together in yangcheng city, a transplant!',
+  '会议介绍': 'Session description',
+  '会议信息': 'The meeting information',
+  '会议日程': 'The meeting agenda',
+  '重要嘉宾': 'Important guests',
+  '更多的会议内容。': 'More conference content',
+  '了解更多关于会议的信息。': 'Learn more about the conference',
+  '会议的主要安排。': 'Master meeting arrangement',
+  '了解嘉宾信息。': 'Get to know the guests',
 };
-
-var langSel = document.querySelector('#lang');
 
 var zhEns = document.querySelectorAll('.zh-en');
 

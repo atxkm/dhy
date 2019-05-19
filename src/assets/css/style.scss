@@ -93,13 +93,15 @@ p {
   }
 
   header {
+    position: relative;
     overflow: hidden;
     height: 96px;
-    margin-bottom: 30px;
     background: rgba(255, 255, 255, 1);
 
     ul {
-      float: right;
+      position: absolute;
+      right: 0;
+      top: 0;
       padding-right: 30px;
       background: #ffffff url("../../assets/img/drop-down.png") no-repeat right 30px top 45px;
       line-height: 96px;
